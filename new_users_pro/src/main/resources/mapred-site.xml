@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+    <!-- 指定mapreduce运行在yarn上 -->
+    <!--<property>-->
+        <!--<name>mapreduce.framework.name</name>-->
+        <!--<value>yarn</value>-->
+    <!--</property>-->
+    <!-- window平台运行MR，必须配置此参数 -->
+    <!--<property>-->
+        <!--<name>mapreduce.app-submission.cross-platform</name>-->
+        <!--<value>true</value>-->
+    <!--</property>-->
+    <!-- 如果本地运行，上面两个配置需要注释 -->
+    <property>
+        <name>mapreduce.jobhistory.webapp.address</name>
+        <value>host144:19888</value>
+    </property>
+    <property>
+        <name>mapreduce.jobhistory.webapp.https.address</name>
+        <value>host144:19890</value>
+    </property>
+</configuration>
+

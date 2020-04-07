@@ -1,0 +1,1679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <!-- 新增用户 -->
+    <property>
+        <name>channel_new_users</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `new_users`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `new_users` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>stats_Install_users</name>
+        <value>
+            INSERT INTO `stats_Install_users`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `ch_dimension_id`,
+            `operator_dimension_id`,
+            `ver_`,
+            `area_dimension_id`,
+            `new_users`)
+            VALUES(?, ?, ?, ?, ?,?,?,?) ON DUPLICATE KEY UPDATE `new_users` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_new_users</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `new_users`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `new_users` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>area_new_users</name>
+        <value>
+            INSERT INTO `stats_user_area`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `area_dimension_id`,
+            `isp_dimension_id`,
+            `new_users`)
+            VALUES(?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `new_users` = ?
+        </value>
+    </property>
+
+    <!-- 新增账户 -->
+    <property>
+        <name>channel_new_accounts</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `new_accounts`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `new_accounts` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_new_accounts</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `new_accounts`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `new_accounts` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>area_new_accounts</name>
+        <value>
+            INSERT INTO `stats_user_area`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `area_dimension_id`,
+            `isp_dimension_id`,
+            `new_accounts`)
+            VALUES(?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `new_accounts` = ?
+        </value>
+    </property>
+
+    <!-- 活跃用户和账户 -->
+    <property>
+        <name>channel_active_users_accounts</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `active_users`,
+            `active_accounts`)
+            VALUES(?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `active_users` = ?, `active_accounts` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_active_users_accounts</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `active_users`,
+            `active_accounts`)
+            VALUES(?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `active_users` = ?, `active_accounts` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>area_active_users_accounts</name>
+        <value>
+            INSERT INTO `stats_user_area`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `area_dimension_id`,
+            `isp_dimension_id`,
+            `active_users`,
+            `active_accounts`)
+            VALUES(?, ?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `active_users` = ?, `active_accounts` = ?
+        </value>
+    </property>
+
+    <!-- 沉默用户 -->
+	<property>
+		<name>channel_silence_user</name>
+		<value>
+			INSERT INTO `stats_user_channel`(
+			`date_dimension_id`,
+			`app_dimension_id`,
+			`platform_dimension_id`,
+			`channel_dimension_id`,
+			`silence_users`)
+			VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `silence_users` = ?
+		</value>
+	</property>
+
+	<property>
+		<name>version_silence_user</name>
+		<value>
+			INSERT INTO `stats_user_version`(
+			`date_dimension_id`,
+			`app_dimension_id`,
+			`platform_dimension_id`,
+			`version_dimension_id`,
+			`silence_users`)
+			VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `silence_users` = ?
+		</value>
+	</property>
+
+	<property>
+		<name>area_silence_user</name>
+		<value>
+			INSERT INTO `stats_user_area`(
+			`date_dimension_id`,
+			`app_dimension_id`,
+			`platform_dimension_id`,
+			`area_dimension_id`,
+			`isp_dimension_id`,
+			`silence_users`)
+			VALUES(?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `silence_users` = ?
+		</value>
+	</property>
+
+    <!-- 七天流失用户 -->
+	<property>
+		<name>channel_seven_day_lose</name>
+		<value>
+			INSERT INTO `stats_user_channel`(
+			`date_dimension_id`,
+			`app_dimension_id`,
+			`platform_dimension_id`,
+			`channel_dimension_id`,
+			`seven_lose_users`)
+			VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `seven_lose_users` = ?
+		</value>
+	</property>
+
+	<property>
+		<name>version_seven_day_lose</name>
+		<value>
+			INSERT INTO `stats_user_version`(
+			`date_dimension_id`,
+			`app_dimension_id`,
+			`platform_dimension_id`,
+			`version_dimension_id`,
+			`seven_lose_users`)
+			VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `seven_lose_users` = ?
+		</value>
+	</property>
+
+	<property>
+		<name>area_seven_day_lose</name>
+		<value>
+			INSERT INTO `stats_user_area`(
+			`date_dimension_id`,
+			`app_dimension_id`,
+			`platform_dimension_id`,
+			`area_dimension_id`,
+			`isp_dimension_id`,
+			`seven_lose_users`)
+			VALUES(?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `seven_lose_users` = ?
+		</value>
+	</property>
+
+    <!-- 十四天流失用户 -->
+	<property>
+		<name>channel_fourteen_day_lose</name>
+		<value>
+			INSERT INTO `stats_user_channel`(
+			`date_dimension_id`,
+			`app_dimension_id`,
+			`platform_dimension_id`,
+			`channel_dimension_id`,
+			`fourteen_lose_users`)
+			VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `fourteen_lose_users` = ?
+		</value>
+	</property>
+
+	<property>
+		<name>version_fourteen_day_lose</name>
+		<value>
+			INSERT INTO `stats_user_version`(
+			`date_dimension_id`,
+			`app_dimension_id`,
+			`platform_dimension_id`,
+			`version_dimension_id`,
+			`fourteen_lose_users`)
+			VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `fourteen_lose_users` = ?
+		</value>
+	</property>
+
+	<property>
+		<name>area_fourteen_day_lose</name>
+		<value>
+			INSERT INTO `stats_user_area`(
+			`date_dimension_id`,
+			`app_dimension_id`,
+			`platform_dimension_id`,
+			`area_dimension_id`,
+			`isp_dimension_id`,
+			`fourteen_lose_users`)
+			VALUES(?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `fourteen_lose_users` = ?
+		</value>
+	</property>
+
+    <!-- 三十天流失用户 -->
+	<property>
+		<name>channel_thirty_day_lose</name>
+		<value>
+			INSERT INTO `stats_user_channel`(
+			`date_dimension_id`,
+			`app_dimension_id`,
+			`platform_dimension_id`,
+			`channel_dimension_id`,
+			`thirty_lose_users`)
+			VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `thirty_lose_users` = ?
+		</value>
+	</property>
+
+	<property>
+		<name>version_thirty_day_lose</name>
+		<value>
+			INSERT INTO `stats_user_version`(
+			`date_dimension_id`,
+			`app_dimension_id`,
+			`platform_dimension_id`,
+			`version_dimension_id`,
+			`thirty_lose_users`)
+			VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `thirty_lose_users` = ?
+		</value>
+	</property>
+
+	<property>
+		<name>area_thirty_day_lose</name>
+		<value>
+			INSERT INTO `stats_user_area`(
+			`date_dimension_id`,
+			`app_dimension_id`,
+			`platform_dimension_id`,
+			`area_dimension_id`,
+			`isp_dimension_id`,
+			`thirty_lose_users`)
+			VALUES(?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `thirty_lose_users` = ?
+		</value>
+	</property>
+
+    <!-- 留存用户sql -->
+    <property>
+        <name>channel_one_day_remain</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `one_day_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `one_day_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>channel_two_day_remain</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `two_day_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `two_day_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>channel_three_day_remain</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `three_day_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `three_day_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>channel_four_day_remain</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `four_day_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `four_day_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>channel_five_day_remain</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `five_day_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `five_day_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>channel_six_day_remain</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `six_day_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `six_day_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>channel_seven_day_remain</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `seven_day_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `seven_day_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>channel_fourteen_day_remain</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `fourteen_day_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `fourteen_day_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>channel_thirty_day_remain</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `thirty_day_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `thirty_day_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_one_day_remain</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `one_day_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `one_day_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_two_day_remain</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `two_day_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `two_day_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_three_day_remain</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `three_day_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `three_day_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_four_day_remain</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `four_day_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `four_day_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_five_day_remain</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `five_day_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `five_day_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_six_day_remain</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `six_day_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `six_day_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_seven_day_remain</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `seven_day_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `seven_day_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_fourteen_day_remain</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `fourteen_day_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `fourteen_day_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_thirty_day_remain</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `thirty_day_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `thirty_day_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>channel_one_week_remain</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `one_week_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `one_week_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>channel_two_week_remain</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `two_week_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `two_week_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>channel_three_week_remain</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `three_week_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `three_week_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>channel_four_week_remain</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `four_week_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `four_week_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>channel_five_week_remain</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `five_week_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `five_week_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>channel_six_week_remain</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `six_week_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `six_week_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>channel_seven_week_remain</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `seven_week_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `seven_week_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>channel_eight_week_remain</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `eight_week_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `eight_week_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>channel_nine_week_remain</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `nine_week_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `nine_week_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_one_week_remain</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `one_week_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `one_week_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_two_week_remain</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `two_week_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `two_week_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_three_week_remain</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `three_week_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `three_week_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_four_week_remain</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `four_week_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `four_week_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_five_week_remain</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `five_week_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `five_week_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_six_week_remain</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `six_week_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `six_week_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_seven_week_remain</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `seven_week_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `seven_week_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_fourteen_week_remain</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `eight_week_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `eight_week_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_nine_week_remain</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `nine_week_remain`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `nine_week_remain` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_upgrade</name>
+        <value>
+            INSERT INTO `version_upgrade`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `p_version_dimension_id`,
+            `version_dimension_id`,
+            `count`)
+            VALUES(?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 回访用户 -->
+    <property>
+        <name>channel_revisit_user</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `revisit_users`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `revisit_users` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_revisit_user</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `revisit_users`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `revisit_users` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>area_revisit_user</name>
+        <value>
+            INSERT INTO `stats_user_area`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `area_dimension_id`,
+            `isp_dimension_id`,
+            `revisit_users`)
+            VALUES(?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `revisit_users` = ?
+        </value>
+    </property>
+
+    <!-- ip,uv,pv -->
+    <property>
+        <name>channel_flow_day</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `pv`,
+            `uv`,
+            `ip`)
+            VALUES(?, ?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `pv` = ?, `uv` = ?, `ip` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_flow_day</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `pv`,
+            `uv`,
+            `ip`)
+            VALUES(?, ?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `pv` = ?, `uv` = ?, `ip` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>area_flow_day</name>
+        <value>
+            INSERT INTO `stats_user_area`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `area_dimension_id`,
+            `isp_dimension_id`,
+            `pv`,
+            `uv`,
+            `ip`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `pv` = ?, `uv` = ?, `ip` = ?
+        </value>
+    </property>
+
+    <!-- 启动次数 -->
+    <property>
+        <name>channel_start_time</name>
+        <value>
+            INSERT INTO `stats_user_channel`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `start_time`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `start_time` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>version_start_time</name>
+        <value>
+            INSERT INTO `stats_user_version`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `start_time`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `start_time` = ?
+        </value>
+    </property>
+
+    <property>
+        <name>area_start_time</name>
+        <value>
+            INSERT INTO `stats_user_area`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `area_dimension_id`,
+            `isp_dimension_id`,
+            `start_time`)
+            VALUES(?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `start_time` = ?
+        </value>
+    </property>
+
+    <!-- 视讯审核人审核内容 -->
+    <property>
+        <name>auditor_sx</name>
+        <value>
+            INSERT INTO `auditor_sx_ol`(
+            `date_dimension_id`,
+            `auditor`,
+            `count`,
+            `created`)
+            VALUES(?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 动漫审核人审核内容 -->
+    <property>
+        <name>auditor_dm</name>
+        <value>
+            INSERT INTO `auditor_dm_ol`(
+            `date_dimension_id`,
+            `auditor`,
+            `type`,
+            `bc_status`,
+            `count`,
+            `total_time`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 卓望审核人审核内容 -->
+    <property>
+        <name>auditor_zw</name>
+        <value>
+            INSERT INTO `auditor_zw_ol`(
+            `date_dimension_id`,
+            `operator`,
+            `count`,
+            `verify`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 卓望审核明细统计-->
+    <property>
+        <name>zw_detail</name>
+        <value>
+            INSERT INTO `zw_detail`(
+            `template_Id`,
+            `template_Name`,
+            `varfile_Id`,
+            `t_Status`,
+            `t_Priority`,
+            `verify`,
+            `operator`,
+            `product_Name`,
+            `create_Time`,
+            `stat_date`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 卓望驳回明细统计-->
+    <property>
+        <name>zw_refuse_detail</name>
+        <value>
+            INSERT INTO `zw_refuse_detail`(
+            `template_Id`,
+            `template_Name`,
+            `varfile_Id`,
+            `t_status`,
+            `type`,
+            `refuseR`,
+            `operator`,
+            `create_Time`,
+            `stat_date`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 咪咕音乐审核人统计 -->
+    <property>
+        <name>migu_music</name>
+        <value>
+            INSERT INTO `migu_music`(
+            `date_dimension_id`,
+            `person`,
+            `check_type`,
+            `bc_status`,
+            `count`,
+            `stat_date`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 咪咕音乐审核明细统计 -->
+    <property>
+        <name>migu_music_detail</name>
+        <value>
+            INSERT INTO `migu_music_detail`(
+            `content_id`,
+            `check_type`,
+            `status`,
+            `person`,
+            `disc_num`,
+            `bTime`,
+            `create_time`,
+            `stat_date`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 视讯模拟平台初审审核明细统计 -->
+    <property>
+        <name>sx_model_audit</name>
+        <value>
+            INSERT INTO `sx_model_audit`(
+            `c_id`,
+            `p_id`,
+            `name`,
+            `displayType`,
+            `displayName`,
+            `bc_status`,
+            `bc_person`,
+            `bc_time`,
+            `l_bc_status`,
+            `stat_date`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 视讯模拟平台复审审核明细统计 -->
+    <property>
+        <name>re_model_audit</name>
+        <value>
+            INSERT INTO `re_model_audit`(
+            `c_id`,
+            `p_id`,
+            `name`,
+            `displayType`,
+            `displayName`,
+            `bc_status`,
+            `bc_person`,
+            `bc_time`,
+            `l_bc_status`,
+            `stat_date`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 视讯模拟平台修改结果审核明细统计 -->
+    <property>
+        <name>ck_model_audit</name>
+        <value>
+            REPLACE INTO `ck_model_audit`(
+            `c_id`,
+            `p_id`,
+            `name`,
+            `displayType`,
+            `displayName`,
+            `bc_status`,
+            `bc_person`,
+            `bc_time`,
+            `check_result`,
+            `stat_date`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!--联通沃音乐日志审核明细统计 -->
+    <property>
+        <name>vod_music_audit</name>
+        <value>
+            INSERT INTO `vod_music_audit`(
+            `c_id`,
+            `p_id`,
+            `c_name`,
+            `bc_status`,
+            `bc_person`,
+            `create_time`,
+            `bc_time`,
+            `bc_reason`,
+            `stat_date`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 动漫日常质检明细统计 -->
+    <property>
+        <name>mg_dp</name>
+        <value>
+            INSERT INTO `mg_dp_detail`(
+            `c_code`,
+            `c_name`,
+            `c_type_name`,
+            `c_src`,
+            `status`,
+            `bc_status`,
+            `dura`,
+            `operator`,
+            `ch_du_time`,
+            `bc_time`,
+            `bc_refuse_r`,
+            `stat_date`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 动漫专项质检明细统计 -->
+    <property>
+        <name>dm_sq</name>
+        <value>
+            INSERT INTO `dm_sq_detail`(
+            `report_id`,
+            `content_code`,
+            `object_id`,
+            `cpID`,
+            `content_name`,
+            `contentType_name`,
+            `audit_status`,
+            `operator`,
+            `approve_opinion`,
+            `approveTime`,
+            `stat_date`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 变更节目统计 -->
+    <property>
+        <name>program_change</name>
+        <value>
+            INSERT INTO `program_change`(
+            `date_dimension_id`,
+            `c_id`,
+            `c_name`,
+            `dura`,
+            `bc_time`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 视讯审核月度总结 -->
+    <property>
+        <name>month_summary</name>
+        <value>
+            INSERT INTO `month_summary`(
+            `cp_id`,
+            `business_type`,
+            `product_name`,
+            `bc_status`,
+            `count`,
+            `stat_date`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 视讯审核数据去重 -->
+    <property>
+        <name>audit_data_distinct</name>
+        <value>
+            INSERT INTO `audit_data_distinct`(
+            `exclude_cpid`,
+            `bc_status`,
+            `distinct_count`,
+            `no_distinct_count`,
+            `stat_date`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- channel维度 频道统计信息 -->
+    <property>
+        <name>channel_program_view_menu</name>
+        <value>
+            INSERT INTO `stats_channel_menu`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `menu_id`,
+            `menu_name`,
+            `pv`,
+            `uv`,
+            `ip`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- channel维度 区块统计信息 -->
+    <property>
+        <name>channel_program_view_area</name>
+        <value>
+            INSERT INTO `stats_channel_area`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `menu_id`,
+            `menu_name`,
+            `area_id`,
+            `area_name`,
+            `pv`,
+            `uv`,
+            `ip`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- channel维度 内容统计信息 -->
+    <property>
+        <name>channel_program_view_cont</name>
+        <value>
+            INSERT INTO `stats_channel_cont`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `menu_id`,
+            `menu_name`,
+            `area_id`,
+            `area_name`,
+            `cont_id`,
+            `cont_name`,
+            `pv`,
+            `uv`,
+            `ip`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- version维度 频道统计信息 -->
+    <property>
+        <name>version_program_view_menu</name>
+        <value>
+            INSERT INTO `stats_version_menu`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `menu_id`,
+            `menu_name`,
+            `pv`,
+            `uv`,
+            `ip`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- version维度 区块统计信息 -->
+    <property>
+        <name>version_program_view_area</name>
+        <value>
+            INSERT INTO `stats_version_area`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `menu_id`,
+            `menu_name`,
+            `area_id`,
+            `area_name`,
+            `pv`,
+            `uv`,
+            `ip`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- version维度 内容统计信息 -->
+    <property>
+        <name>version_program_view_cont</name>
+        <value>
+            INSERT INTO `stats_version_cont`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `menu_id`,
+            `menu_name`,
+            `area_id`,
+            `area_name`,
+            `cont_id`,
+            `cont_name`,
+            `pv`,
+            `uv`,
+            `ip`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- area维度 频道统计信息 -->
+    <property>
+        <name>area_program_view_menu</name>
+        <value>
+            INSERT INTO `stats_area_menu`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `area_dimension_id`,
+            `isp_dimension_id`,
+            `menu_id`,
+            `menu_name`,
+            `pv`,
+            `uv`,
+            `ip`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- area维度 区块统计信息 -->
+    <property>
+        <name>area_program_view_area</name>
+        <value>
+            INSERT INTO `stats_area_area`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `area_dimension_id`,
+            `isp_dimension_id`,
+            `menu_id`,
+            `menu_name`,
+            `area_id`,
+            `area_name`,
+            `pv`,
+            `uv`,
+            `ip`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- area维度 内容统计信息 -->
+    <property>
+        <name>area_program_view_cont</name>
+        <value>
+            INSERT INTO `stats_area_cont`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `area_dimension_id`,
+            `isp_dimension_id`,
+            `menu_id`,
+            `menu_name`,
+            `area_id`,
+            `area_name`,
+            `cont_id`,
+            `cont_name`,
+            `pv`,
+            `uv`,
+            `ip`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- channel维度 直播节目统计信息 -->
+    <property>
+        <name>channel_live_program</name>
+        <value>
+            INSERT INTO `stats_channel_live`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `channel_dimension_id`,
+            `p_type`,
+            `l_type`,
+            `l_id`,
+            `l_name`,
+            `pv`,
+            `uv`,
+            `ip`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- version维度 直播节目统计信息 -->
+    <property>
+        <name>version_live_program</name>
+        <value>
+            INSERT INTO `stats_version_live`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `version_dimension_id`,
+            `p_type`,
+            `l_type`,
+            `l_id`,
+            `l_name`,
+            `pv`,
+            `uv`,
+            `ip`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- area维度 直播节目统计信息 -->
+    <property>
+        <name>area_live_program</name>
+        <value>
+            INSERT INTO `stats_area_live`(
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `area_dimension_id`,
+            `isp_dimension_id`,
+            `p_type`,
+            `l_type`,
+            `l_id`,
+            `l_name`,
+            `pv`,
+            `uv`,
+            `ip`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 分层分级栏目统计 -->
+    <property>
+        <name>fenceng_fenji_lanmu</name>
+        <value>
+            INSERT INTO `stats_lanmu`(
+            `l_name`,
+            `pv`,
+            `uv`,
+            `ip`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 驳回类型统计 -->
+    <property>
+        <name>refuse_type</name>
+        <value>
+            INSERT INTO `refuse_type_stat`(
+            `type`,
+            `c_id`,
+            `c_name`,
+            `bc_person`,
+            `bc_time`,
+            `refuse_t`,
+            `refuse_r`,
+            `stat_date`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 播控概况统计 -->
+    <property>
+        <name>bc_overview</name>
+        <value>
+            INSERT INTO `bc_overview`(
+            `type`,
+            `count`,
+            `stat_date`,
+            `created`)
+            VALUES(?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 多重审核明细数据 -->
+    <property>
+        <name>repeat_audit</name>
+        <value>
+            INSERT INTO `repeat_audit`(
+            `c_id`,
+            `p_id`,
+            `c_name`,
+            `bc_person`,
+            `bc_time`,
+            `bc_status`,
+            `stat_date`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 审核剩余时间明细 -->
+    <property>
+        <name>sp_time</name>
+        <value>
+            INSERT INTO `sp_time`(
+            `c_id`,
+            `p_id`,
+            `c_name`,
+            `bc_person`,
+            `bc_time`,
+            `bc_status`,
+            `sp_time`,
+            `stat_date`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 复审数据统计 -->
+    <property>
+        <name>bc_review</name>
+        <value>
+            INSERT INTO `bc_review`(
+            `c_id`,
+            `p_id`,
+            `c_name`,
+            `bc_person`,
+            `bc_time`,
+            `bc_status`,
+            `l_bc_person`,
+            `is_bc_re`,
+            `prd_id`,
+            `prd_name`,
+            `prd_type`,
+            `l_bc_time`,
+            `l_bc_status`,
+            `change_or_not`,
+            `bc_refuse_r`,
+            `stat_date`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <!-- 复审平台截图统计 -->
+    <property>
+        <name>review_pic</name>
+        <value>
+            INSERT INTO `review_pic`(
+            `c_id`,
+            `opertor`,
+            `src_type`,
+            `opt_time`,
+            `re_pic_desc`,
+            `re_pic_addr`,
+            `stat_date`,
+            `created`)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+
+    <!--动漫复审数据统计 -->
+    <property>
+        <name>dm_review</name>
+        <value>
+            INSERT INTO `dm_review`(
+            id,
+            `c_code`,
+            `c_name`,
+            `operator`,
+            `bc_time`,
+            `c_type_name`,
+            `re_result`,
+            `re_time`,
+            `l_bc_person`,
+            `status`,
+            `change_or_not`,
+            `bc_refuse_r`,
+            `stat_date`,
+            `created`)
+            VALUES(?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+
+    <property>
+        <name>phoenix_sx</name>
+        <value>
+            upsert INTO "phoenix_sx"(
+            "cid",
+            "mid",
+            "pid",
+            "nm",
+            "dura",
+            "cpid",
+            "ncid",
+            "ccid",
+            "st",
+            "ft",
+            "lmt",
+            "prid",
+            "prnm",
+            "prtp",
+            "bcs",
+            "bcp",
+            "bct",
+            "snt",
+            "ctp",
+            "sl",
+            "bcrr",
+            "spt",
+            "lbp",
+            "ibr",
+            "isd")
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        </value>
+    </property>
+
+    <property>
+        <name>phoenix_dm</name>
+        <value>
+            upsert INTO "phoenix_dm"(
+            "cid",
+            "ccd",
+            "cpid",
+            "cpn",
+            "cname",
+            "ctn",
+            "csc",
+            "st",
+            "dura",
+            "price",
+            "opt",
+            "cdt",
+            "bct",
+            "bcs",
+            "ct",
+            "pct",
+            "brr")
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?)
+        </value>
+    </property>
+
+    <property>
+        <name>search_hot_word</name>
+        <value>
+            INSERT INTO `hot_key`(
+            `date_dimension_id`,
+            `kw`,
+            `count`)
+            VALUES(?, ?, ?)
+        </value>
+    </property>
+</configuration>

@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+
+    <!-- 新增用户 -->
+    <property>
+        <name>collector_channel_new_users</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+    <property>
+        <name>new_install_users</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.NewInstallUsers</value>
+    </property>
+
+    <property>
+        <name>collector_version_new_users</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_new_users</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 新增账户 -->
+    <property>
+        <name>collector_channel_new_accounts</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_new_accounts</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_new_accounts</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 活跃用户和账户 -->
+    <property>
+        <name>collector_channel_active_users_accounts</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ActiveUsersAccountsChannelCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_active_users_accounts</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ActiveUsersAccountsVersionCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_active_users_accounts</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ActiveUsersAccountsAreaCollector</value>
+    </property>
+
+    <!-- 沉默用户 -->
+    <property>
+        <name>collector_channel_silence_user</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_silence_user</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_silence_user</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 七天流失用户 -->
+    <property>
+        <name>collector_channel_seven_day_lose</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_seven_day_lose</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_seven_day_lose</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 十四天流失用户 -->
+    <property>
+        <name>collector_channel_fourteen_day_lose</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_fourteen_day_lose</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_fourteen_day_lose</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 三十天流失用户 -->
+    <property>
+        <name>collector_channel_thirty_day_lose</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_thirty_day_lose</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_thirty_day_lose</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 一日留存 -->
+    <property>
+        <name>collector_channel_one_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_one_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_one_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 二日留存 -->
+    <property>
+        <name>collector_channel_two_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_two_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_two_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 三日留存 -->
+    <property>
+        <name>collector_channel_three_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_three_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_three_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 四日留存 -->
+    <property>
+        <name>collector_channel_four_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_four_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_four_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 五日留存 -->
+    <property>
+        <name>collector_channel_five_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_five_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_five_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 六日留存 -->
+    <property>
+        <name>collector_channel_six_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_six_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_six_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 七日留存 -->
+    <property>
+        <name>collector_channel_seven_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_seven_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_seven_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 十四日留存 -->
+    <property>
+        <name>collector_channel_fourteen_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_fourteen_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_fourteen_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 三十日留存 -->
+    <property>
+        <name>collector_channel_thirty_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_thirty_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_thirty_day_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 一周留存 -->
+    <property>
+        <name>collector_channel_one_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_one_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_one_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 二周留存 -->
+    <property>
+        <name>collector_channel_two_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_two_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_two_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 三周留存 -->
+    <property>
+        <name>collector_channel_three_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_three_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_three_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 四周留存 -->
+    <property>
+        <name>collector_channel_four_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_four_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_four_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 五周留存 -->
+    <property>
+        <name>collector_channel_five_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_five_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_five_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 六周留存 -->
+    <property>
+        <name>collector_channel_six_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_six_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_six_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 七周留存 -->
+    <property>
+        <name>collector_channel_seven_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_seven_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_seven_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 八周留存 -->
+    <property>
+        <name>collector_channel_eight_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_eight_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_eight_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 九周留存 -->
+    <property>
+        <name>collector_channel_nine_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_nine_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_nine_week_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 一月留存 -->
+    <property>
+        <name>collector_channel_one_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_one_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_one_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 二月留存 -->
+    <property>
+        <name>collector_channel_two_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_two_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_two_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 三月留存 -->
+    <property>
+        <name>collector_channel_three_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_three_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_three_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 四月留存 -->
+    <property>
+        <name>collector_channel_four_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_four_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_four_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 五月留存 -->
+    <property>
+        <name>collector_channel_five_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_five_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_five_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 六月留存 -->
+    <property>
+        <name>collector_channel_six_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_six_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_six_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 七月留存 -->
+    <property>
+        <name>collector_channel_seven_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_seven_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_seven_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 八月留存 -->
+    <property>
+        <name>collector_channel_eight_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_eight_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_eight_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 九月留存 -->
+    <property>
+        <name>collector_channel_nine_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_nine_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_nine_month_remain</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 版本升级 -->
+    <property>
+        <name>collector_version_upgrade</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUpgradeCollector</value>
+    </property>
+
+    <!-- 回访用户 -->
+    <property>
+        <name>collector_channel_revisit_user</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_revisit_user</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_revisit_user</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- pv,uv,ip -->
+    <property>
+        <name>collector_channel_flow_day</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.FlowDayChannelCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_flow_day</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.FlowDayVersionCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_flow_day</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.FlowDayAreaCollector</value>
+    </property>
+
+    <!-- 启动次数 -->
+    <property>
+        <name>collector_channel_start_time</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_version_start_time</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.VersionUserCollector</value>
+    </property>
+
+    <property>
+        <name>collector_area_start_time</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.AreaUserCollector</value>
+    </property>
+
+    <!-- 视讯审核人审核内容 -->
+    <property>
+        <name>collector_auditor_sx</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.auditorsx.AuditorSXCollector</value>
+    </property>
+
+    <!-- 动漫审核人审核内容 -->
+    <property>
+        <name>collector_auditor_dm</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.auditordm.AuditorDMCollector</value>
+    </property>
+
+    <!-- 卓望审核人审核内容 -->
+    <property>
+        <name>collector_auditor_zw</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.auditorzw.AuditorZWCollector</value>
+    </property>
+
+    <!-- 卓望审核明细统计 -->
+    <property>
+        <name>collector_zw_detail</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.zwdetail.ZWDetailCollector</value>
+    </property>
+
+    <!-- 卓望驳回明细统计 -->
+    <property>
+        <name>collector_zw_refuse_detail</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.zwrefuse.ZWRefuseCollector</value>
+    </property>
+
+    <!-- 变更节目统计 -->
+    <property>
+        <name>collector_program_change</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.programchange.ProgramChangeCollector</value>
+    </property>
+
+    <!-- 视讯审核月度总结 -->
+    <property>
+        <name>collector_month_summary</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.monthsummary.MonthSummaryCollector</value>
+    </property>
+
+    <!-- 视讯审核月度总结 -->
+    <property>
+        <name>collector_audit_data_distinct</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.distinct.AuditDataDistinctCollector</value>
+    </property>
+
+    <!-- channel维度 频道统计信息 -->
+    <property>
+        <name>collector_channel_program_view_menu</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.programview.ChannelMenuCollector</value>
+    </property>
+
+    <!-- channel维度 区块统计信息 -->
+    <property>
+        <name>collector_channel_program_view_area</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.programview.ChannelAreaCollector</value>
+    </property>
+
+    <!-- channel维度 内容统计信息 -->
+    <property>
+        <name>collector_channel_program_view_cont</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.programview.ChannelContCollector</value>
+    </property>
+
+    <!-- version维度 频道统计信息 -->
+    <property>
+        <name>collector_version_program_view_menu</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.programview.VersionMenuCollector</value>
+    </property>
+
+    <!-- version维度 区块统计信息 -->
+    <property>
+        <name>collector_version_program_view_area</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.programview.VersionAreaCollector</value>
+    </property>
+
+    <!-- version维度 内容统计信息 -->
+    <property>
+        <name>collector_version_program_view_cont</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.programview.VersionContCollector</value>
+    </property>
+
+    <!-- area维度 频道统计信息 -->
+    <property>
+        <name>collector_area_program_view_menu</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.programview.AreaMenuCollector</value>
+    </property>
+
+    <!-- area维度 区块统计信息 -->
+    <property>
+        <name>collector_area_program_view_area</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.programview.AreaAreaCollector</value>
+    </property>
+
+    <!-- area维度 内容统计信息 -->
+    <property>
+        <name>collector_area_program_view_cont</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.programview.AreaContCollector</value>
+    </property>
+
+    <!-- channel维度 直播节目统计信息 -->
+    <property>
+        <name>collector_channel_live_program</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.liveprogram.LiveProgramChannelCollector</value>
+    </property>
+
+    <!-- version维度 直播节目统计信息 -->
+    <property>
+        <name>collector_version_live_program</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.liveprogram.LiveProgramVersionCollector</value>
+    </property>
+
+    <!-- area维度 直播节目统计信息 -->
+    <property>
+        <name>collector_area_live_program</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.liveprogram.LiveProgramAreaCollector</value>
+    </property>
+
+    <!-- 分层分级栏目 -->
+    <property>
+        <name>collector_fenceng_fenji_lanmu</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.programview.LanMuCollector</value>
+    </property>
+
+    <!-- 驳回类型统计 -->
+    <property>
+        <name>collector_refuse_type</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.refusetypestat.RefuseTypeStatCollector</value>
+    </property>
+
+    <!-- 播控概述统计 -->
+    <property>
+        <name>collector_bc_overview</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.bcoverview.BcOverviewCollector</value>
+    </property>
+
+    <!-- 多重审核明细数据 -->
+    <property>
+        <name>collector_repeat_audit</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.repeataudit.RepeatAuditCollector</value>
+    </property>
+
+    <!-- 审核剩余时间明细数据 -->
+    <property>
+        <name>collector_sp_time</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.sptime.SpTimeCollector</value>
+    </property>
+
+    <!-- 复审数据统计 -->
+    <property>
+        <name>collector_bc_review</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.bcreview.BcReviewCollector</value>
+    </property>
+
+    <!-- 复审平台截图 -->
+    <property>
+        <name>collector_review_pic</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.reviewpic.ReviewPicCollector</value>
+    </property>
+
+
+    <!-- 动漫复审数据统计 -->
+    <property>
+        <name>collector_dm_review</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.dmreview.DMReviewCollector</value>
+    </property>
+    <!-- 搜索热词 -->
+    <property>
+        <name>collector_search_hot_word</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.HotKeyCollecter</value>
+    </property>
+
+    <!-- phoenix 视讯 -->
+    <property>
+        <name>collector_phoenix_sx</name>
+        <value>com.wondertek.bigdata.offline.mr.phoenix.sx.PhoenixSXCollector</value>
+    </property>
+
+    <!-- phoenix 动漫 -->
+    <property>
+        <name>collector_phoenix_dm</name>
+        <value>com.wondertek.bigdata.offline.mr.phoenix.dm.PhoenixDMCollector</value>
+    </property>
+
+    <!-- 咪咕音乐审核人离线统计 -->
+    <property>
+        <name>collector_migu_music</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.migumusic.MGMusicCollector</value>
+    </property>
+
+
+    <!-- 咪咕音乐审核明细统计 -->
+    <property>
+        <name>collector_migu_music_detail</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.migumusicdetail.MGMusicDetailCollector</value>
+    </property>
+
+    <!-- 视讯模拟平台初审审核明细统计 -->
+    <property>
+        <name>collector_sx_model_audit</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.sxmodelplatform.SxModelDetailCollector</value>
+    </property>
+
+    <!-- 视讯模拟平台复审审核明细统计 -->
+    <property>
+        <name>collector_re_model_audit</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.sxmodelplatform.ReviewModelDetailCollector</value>
+    </property>
+
+    <!-- 视讯模拟平台修改结果审核明细统计 -->
+    <property>
+        <name>collector_ck_model_audit</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.sxmodelplatform.ChkResultModelDetailCollector</value>
+    </property>
+
+    <!-- 联通沃音乐日志审核明细统计 -->
+    <property>
+        <name>collector_vod_music_audit</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.vodmusic.VodMusicDetailCollector</value>
+    </property>
+
+    <!-- 动漫日常质检明细统计 -->
+    <property>
+        <name>collector_mg_dp</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.mgdpdetail.MGDPDetailCollector</value>
+    </property>
+
+    <!-- 动漫专项质检明细统计 -->
+    <property>
+        <name>collector_dm_sq</name>
+        <value>com.wondertek.bigdata.offline.mr.audit.dmsqdetail.DMSQDetailCollector</value>
+    </property>
+</configuration>

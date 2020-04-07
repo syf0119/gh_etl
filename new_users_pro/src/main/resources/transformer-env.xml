@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+	<property>
+		<name>mysql.batch.number</name>
+		<value>2</value>
+	</property>
+
+	<property>
+		<name>mysql.report.driver</name>
+		<value>com.mysql.jdbc.Driver</value>
+	</property>
+
+<!--<property>
+		<name>mysql.report.url</name>
+		<value>
+			jdbc:mysql://192.168.10.145:3306/test?useUnicode=true&amp;characterEncoding=utf8
+		</value>
+	</property>
+
+	<property>
+		<name>mysql.report.username</name>
+		<value>root</value>
+	</property>
+
+	<property>
+		<name>mysql.report.password</name>
+		<value>cntv4g</value>
+	</property>-->
+
+	<!--<property>-->
+		<!--<name>mysql.report.url</name>-->
+		<!--<value>-->
+			<!--jdbc:mysql://10.20.4.222:3306/hadoop?useUnicode=true&amp;-->
+		<!--</value>-->
+	<!--</property>-->
+
+	<!--<property>-->
+		<!--<name>mysql.report.username</name>-->
+		<!--<value>bigdata</value>-->
+	<!--</property>-->
+
+	<!--<property>-->
+		<!--<name>mysql.report.password</name>-->
+		<!--<value>bigdata</value>-->
+	<!--</property>-->
+
+
+	 <!--网达数据库连接-->
+	<property>
+		<name>mysql.report.url</name>
+		<value>
+			jdbc:mysql://192.168.1.181:13306/syf_test?useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true&amp;failOverReadOnly=false
+		</value>
+	</property>
+
+	<property>
+		<name>mysql.report.username</name>
+		<value>cloud</value>
+	</property>
+
+	<property>
+		<name>mysql.report.password</name>
+		<value>cloud</value>
+	</property>
+
+	<!--<property>-->
+		<!--<name>phoenix.jdbc.url</name>-->
+		<!--<value>jdbc:phoenix:hadoop01,hadoop02,hadoop03:2181</value>-->
+	<!--</property>-->
+
+	<!--<property>-->
+		<!--<name>phoenix.jdbc.driver</name>-->
+		<!--<value>org.apache.phoenix.jdbc.PhoenixDriver</value>-->
+	<!--</property>-->
+
+	<!--<property>-->
+		<!--<name>phoenix.batch.number</name>-->
+		<!--<value>300</value>-->
+	<!--</property>-->
+</configuration>
