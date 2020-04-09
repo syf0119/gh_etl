@@ -88,6 +88,11 @@ public class LoggerUtil {
             clientInfo.put(EventLogConstants.LOG_COLUMN_NAME_PROVINCE, info.getProvince());
             clientInfo.put(EventLogConstants.LOG_COLUMN_NAME_COUNTRY, info.getCountry());
             clientInfo.put(EventLogConstants.LOG_COLUMN_NAME_ISP, info.getIsp());
+        }else{
+            clientInfo.put(EventLogConstants.LOG_COLUMN_NAME_CITY,GlobalConstants.DEFAULT_VALUE);
+            clientInfo.put(EventLogConstants.LOG_COLUMN_NAME_PROVINCE, GlobalConstants.DEFAULT_VALUE);
+            clientInfo.put(EventLogConstants.LOG_COLUMN_NAME_COUNTRY, GlobalConstants.DEFAULT_VALUE);
+            clientInfo.put(EventLogConstants.LOG_COLUMN_NAME_ISP, GlobalConstants.DEFAULT_VALUE);
         }
     }
 
@@ -152,7 +157,7 @@ public class LoggerUtil {
 
 
 
-        Map<String, String> map = handleLog("61.236.132.2^A1585817435252^A/college.png?en=e_st&pl=4&app_id=1&ch_id=360&c_ver=1.1.2&user_id=&c_time=20200402165035252&net_t=WIFIc_uuid=afdd2cd4-92b6-44e3-89dc-625643427a4c\n");
+        Map<String, String> map = handleLog("-^A1548201186.861^A/dw.png?en=e_ca&cont_id=1000057464&ca=1&cpid=149&api_v=1.0&pl=1&uuid=20190108195025700-Z0053084069113286999&ch_id=&n_id=&disp_time=");
 parseIp(map);
 
 

@@ -35,6 +35,7 @@ public class DimensionConverterClient {
     String address = cf[0]; // 获取ip地址
     int port = Integer.valueOf(cf[1]); // 获取端口号
     // 创建代理对象
+        //
         return new InnerDimensionConverterProxy(conf, address, port);
 }
 
@@ -116,6 +117,10 @@ public class DimensionConverterClient {
          */
         public InnerDimensionConverterProxy(Configuration conf, String address, int port)
                 throws IOException {
+            //IDimensionConverter proxy = RPC.getProxy(IDimensionConverter.class, IDimensionConverter.versionID, new InetSocketAddress("localhost", 8889), conf);
+// TODO: 2020.4.8 更改了ip和端口
+            address="localhost";
+            port=8889;
             this.proxy = RPC.getProxy(IDimensionConverter.class, IDimensionConverter.versionID,
                 new InetSocketAddress(address, port), conf);
     }

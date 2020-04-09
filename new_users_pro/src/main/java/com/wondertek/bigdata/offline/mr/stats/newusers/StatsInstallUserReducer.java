@@ -7,12 +7,14 @@ import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.MapWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
 public class StatsInstallUserReducer extends Reducer<StatsInstallUser,Text,StatsInstallUser,MapWritableValue>{
+    private static final Logger logger=Logger.getLogger(StatsInstallUserReducer.class);
     private Set<String> set=new HashSet<>();
 
     @Override
@@ -29,6 +31,9 @@ public class StatsInstallUserReducer extends Reducer<StatsInstallUser,Text,Stats
         MapWritableValue mapWritableValue = new MapWritableValue();
         mapWritableValue.setKpi(KpiEnum.valueOfName(key.getKpiDimensionKey().getKpiName()));
         mapWritableValue.setValue(mapWritable);
+       // logger.info(key+"  "+mapWritable);
+
+        context.write(key,mapWritableValue);
 
 
 

@@ -2,6 +2,24 @@
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <configuration>
     <!-- 新增用户 -->
+
+    <property>
+        <name>new_install_users</name>
+        <value>
+            INSERT INTO `stats_install_user` (
+            `date_dimension_id`,
+            `app_dimension_id`,
+            `platform_dimension_id`,
+            `ch_dimension_id`,
+            `operator_dimension_id`,
+            `ver_`,
+            `area_dimension_id`,
+            `new_install_users`)
+            VALUES(?, ?, ?, ?, ?,?,?,?) ON DUPLICATE KEY UPDATE `new_install_users` = ?
+        </value>
+    </property>
+
+
     <property>
         <name>channel_new_users</name>
         <value>
@@ -10,26 +28,13 @@
             `app_dimension_id`,
             `platform_dimension_id`,
             `channel_dimension_id`,
-            `new_users`)
-            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `new_users` = ?
+            `new_install_users`)
+            VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `new_install_users` = ?
         </value>
     </property>
 
-    <property>
-        <name>stats_Install_users</name>
-        <value>
-            INSERT INTO `stats_Install_users`(
-            `date_dimension_id`,
-            `app_dimension_id`,
-            `platform_dimension_id`,
-            `ch_dimension_id`,
-            `operator_dimension_id`,
-            `ver_`,
-            `area_dimension_id`,
-            `new_users`)
-            VALUES(?, ?, ?, ?, ?,?,?,?) ON DUPLICATE KEY UPDATE `new_users` = ?
-        </value>
-    </property>
+
+
 
     <property>
         <name>version_new_users</name>

@@ -26,6 +26,9 @@ public class NewInstallUsersCollector implements IOutputCollector {
 
 
 
+
+
+
         int i=0;
 /**
  * `date_dimension_id`,
@@ -45,9 +48,10 @@ public class NewInstallUsersCollector implements IOutputCollector {
             pstmt.setInt(++i,converter.getDimensionIdByValue(newInstallUsers.getChannelDimensionKey()));
             pstmt.setInt(++i,converter.getDimensionIdByValue(newInstallUsers.getIspDimensionKey()));
             pstmt.setInt(++i,converter.getDimensionIdByValue(newInstallUsers.getVersionDimensionKey()));
-            pstmt.setInt(++i,converter.getDimensionIdByValue(newInstallUsers.getVersionDimensionKey()));
+            pstmt.setInt(++i,converter.getDimensionIdByValue(newInstallUsers.getAreaDimensionKey()));
             pstmt.setInt(++i,num.get());
             pstmt.setInt(++i,num.get());
+            pstmt.addBatch();
 
 
         } catch (SQLException e) {

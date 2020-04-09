@@ -21,7 +21,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 
  * 自定义输出到MySQL的outputformat类
  */
 public class TransformerOutputFormat extends OutputFormat<KeyBaseDimension, BaseStatsValueWritable> {
@@ -30,7 +29,7 @@ public class TransformerOutputFormat extends OutputFormat<KeyBaseDimension, Base
      * 返回一个具体定义如何输出数据的对象, recordwriter被称为数据的输出器
      * getRecordWriter用于返回一个RecordWriter的实例，Reduce任务在执行的时候就是利用这个实例来输出Key/Value的。
      * （如果Job不需要Reduce，那么Map任务会直接使用这个实例来进行输出。）
-      */
+     */
     @Override
     public RecordWriter<KeyBaseDimension, BaseStatsValueWritable> getRecordWriter(TaskAttemptContext context)
             throws IOException, InterruptedException {
@@ -39,7 +38,7 @@ public class TransformerOutputFormat extends OutputFormat<KeyBaseDimension, Base
          * 使用RPC方式创建converter，很重要，通过配置获取维度id
          */
         IDimensionConverter converter = DimensionConverterClient.createDimensionConverter(conf);
-        Connection conn ;
+        Connection conn;
 
         try {
             conn = JdbcManager.getConnection(conf, GlobalConstants.WAREHOUSE_OF_REPORT);
@@ -48,6 +47,9 @@ public class TransformerOutputFormat extends OutputFormat<KeyBaseDimension, Base
         } catch (Exception e) {
             throw new RuntimeException("获取数据库连接失败", e);
         }
+        /**
+         *
+         */
         return new TransformerRecordWriter(conn, conf, converter);
     }
 
@@ -56,6 +58,7 @@ public class TransformerOutputFormat extends OutputFormat<KeyBaseDimension, Base
      * checkOutputSpecs是 在JobClient提交Job之前被调用的（在使用InputFomat进行输入数据划分之前），用于检测Job的输出路径。
      * 比如，FileOutputFormat通过这个方法来确认在Job开始之前，Job的Output路径并不存在，然后该方法又会重新创建这个Output 路径。
      * 这样一来，就能确保Job结束后，Output路径下的东西就是且仅是该Job输出的。
+     *
      * @param context
      * @throws IOException
      * @throws InterruptedException
@@ -68,6 +71,7 @@ public class TransformerOutputFormat extends OutputFormat<KeyBaseDimension, Base
 
     /**
      * getOutputCommitter则 用于返回一个OutputCommitter的实例
+     *
      * @param context
      * @return
      * @throws IOException
@@ -99,6 +103,7 @@ public class TransformerOutputFormat extends OutputFormat<KeyBaseDimension, Base
         /**
          * 输出数据, 当在reduce中调用context.write方法的时候，底层调用的是该方法
          * 将Reduce输出的Key/Value写成特定的格式
+         *
          * @param key
          * @param value
          * @throws IOException
@@ -151,13 +156,14 @@ public class TransformerOutputFormat extends OutputFormat<KeyBaseDimension, Base
         /**
          * 关闭资源使用，最终一定会调用
          * 负责对输出做最后的确认并关闭输出
+         *
          * @param context
          * @throws IOException
          * @throws InterruptedException
          */
         @Override
         public void close(TaskAttemptContext context) throws IOException, InterruptedException {
-                try {
+            try {
                 try {
                     for (Map.Entry<KpiEnum, PreparedStatement> entry : this.kpiTypeSQLMap.entrySet()) {
                         entry.getValue().executeBatch();

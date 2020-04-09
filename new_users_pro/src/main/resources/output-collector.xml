@@ -8,8 +8,8 @@
         <value>com.wondertek.bigdata.offline.mr.stats.collector.ChannelUserCollector</value>
     </property>
     <property>
-        <name>new_install_users</name>
-        <value>com.wondertek.bigdata.offline.mr.stats.collector.NewInstallUsers</value>
+        <name>collector_new_install_users</name>
+        <value>com.wondertek.bigdata.offline.mr.stats.collector.NewInstallUsersCollector</value>
     </property>
 
     <property>

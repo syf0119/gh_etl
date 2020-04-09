@@ -9,10 +9,12 @@ import org.apache.hadoop.hbase.io.ImmutableBytesWritable;
 import org.apache.hadoop.hbase.mapreduce.TableMapper;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.io.Text;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
 
 public class StatsInstallUserMapper extends TableMapper<StatsInstallUser, Text> {
+    private static final Logger logger = Logger.getLogger(StatsInstallUserMapper.class);
     private DateDimensionKey dateKey;
     private KpiDimensionKey InstallUserKpi = new KpiDimensionKey(KpiEnum.NEW_INSTALL_USERS.name);
 
@@ -49,6 +51,8 @@ public class StatsInstallUserMapper extends TableMapper<StatsInstallUser, Text> 
         result2UserKpi(value, userKpi);
         Text uuidText = new Text(uuid);
 
+        //logger.info("userKpi: " + userKpi);
+
 
         context.write(userKpi, uuidText);
 
@@ -68,7 +72,7 @@ public class StatsInstallUserMapper extends TableMapper<StatsInstallUser, Text> 
 
 
         userKpi.setAppDimensionKey(new AppDimensionKey(appId, AppEnum.valueOfAlias(appId).name));
-        userKpi.setPlatformDimensionKey(new PlatformDimensionKey(platformId, PlatFormEnum.valueOf(platformId).name));
+        userKpi.setPlatformDimensionKey(new PlatformDimensionKey(platformId, PlatFormEnum.valueOfAlias(platformId).name));
 
 
         userKpi.setChannelDimensionKey(new ChannelDimensionKey(ChannelEnum.valueOfName(channel).name));

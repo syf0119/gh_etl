@@ -266,8 +266,9 @@ public class DimensionConverterImpl implements IDimensionConverter {
     }
 
     private String[] buildIspSql() {
+        // TODO: 2020.4.8 把isp改为operator
         String querySql = "SELECT `id` FROM `dimension_isp` WHERE `isp` = ?";
-        String insertSql = "INSERT INTO `dimension_isp`(`isp`) VALUES(?)";
+        String insertSql = "INSERT INTO `dimension_isp`(`operator`) VALUES(?)";
         return new String[] { querySql, insertSql };
     }
 

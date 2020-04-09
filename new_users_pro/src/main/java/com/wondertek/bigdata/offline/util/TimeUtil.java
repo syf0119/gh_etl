@@ -41,7 +41,8 @@ public class TimeUtil {
     public static String getYesterday(String pattern) {
         SimpleDateFormat sdf = new SimpleDateFormat(pattern);
         Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.DAY_OF_YEAR, -1);
+        // TODO: 2020.4.8   calendar.add(Calendar.DAY_OF_YEAR, -1);
+        calendar.add(Calendar.DAY_OF_YEAR, 0);
         return sdf.format(calendar.getTime());
     }
 

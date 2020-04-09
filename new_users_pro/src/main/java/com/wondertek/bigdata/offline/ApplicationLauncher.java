@@ -19,6 +19,7 @@ public class ApplicationLauncher {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        long before = System.currentTimeMillis();
         try {
             int exitCode = ToolRunner.run(new StatsInstallUserRunner(), args);
             if(exitCode==1){
@@ -30,6 +31,9 @@ public class ApplicationLauncher {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        long after = System.currentTimeMillis();
+        long spendTime = (after - before) / 1000;
+        System.out.println("一共消耗"+spendTime+"秒");
 
     }
 }
